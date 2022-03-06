@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import ProductsView from '../views/ProductsView.vue'
+import ProductDescriptionView from '../views/ProductDescriptionView.vue'
 
 const routes = [
   {
@@ -18,7 +19,12 @@ const routes = [
     path: '/products',
     name: 'products',
     component: ProductsView
-  }
+  },
+  {
+    path: '/xtracking',
+    name: 'product',
+    component: ProductDescriptionView
+  },
 ]
 
 const router = createRouter({

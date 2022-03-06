@@ -7,11 +7,18 @@ export default createStore({
     getToken(){
       let token = localStorage.getItem(`token`);
       return token;
+    },
+    getMenu(){
+      let menu = localStorage.getItem(`menu`);
+      return JSON.parse(menu);
     }
   },
   mutations: {
     setToken(state, token) {
       state.token = token;
+    },
+    setMenu(state, menu) {
+      state.menu = menu
     }
   },
   actions: {
@@ -19,9 +26,9 @@ export default createStore({
       commit(`setToken`, token);
       localStorage.setItem(`token`,token);
     },
-    prueba({commit}) {
-      commit(`setToken`,null);
-      localStorage.removeItem(`token`);
+    saveMenu({commit},menu) {
+      commit(`setMenu`,null);
+      localStorage.setItem(`menu`,menu);
     }
   },
   modules: {

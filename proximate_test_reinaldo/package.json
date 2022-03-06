@@ -43,7 +43,9 @@
       "vue/multi-word-component-names": ["error", {
         "ignores": [
           "Login",
-          "Products"
+          "Products",
+          "Loading",
+          "Header"
         ]
       }]
     }

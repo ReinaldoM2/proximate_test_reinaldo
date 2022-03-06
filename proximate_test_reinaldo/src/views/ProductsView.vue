@@ -9,6 +9,6 @@ export default {
   name: 'ProductsView',
   components: {
     Products
-  }
+  },
 }
 </script>
